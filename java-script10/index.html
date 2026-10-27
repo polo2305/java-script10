@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Entrega 10 - APIs, Peticiones y Librerías</title>
+    <!-- Vinculación del CSS propio -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CDN de SweetAlert2 para notificaciones profesionales -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Vinculación del JS con defer -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Mi Simulador de Tienda</h1>
+            <p>Consumo de Datos con Fetch y Librerías</p>
+        </header>
+
+        <!-- Estado de carga asíncrona -->
+        <section class="async-section">
+            <div id="estado-carga" class="banner-carga">⏳ Conectando con el servidor...</div>
+        </section>
+
+        <!-- Formulario para agregar nuevos productos -->
+        <section class="form-section">
+            <h2>Agregar Nuevo Producto</h2>
+            <form id="form-producto">
+                <div class="input-group">
+                    <label for="nombre-input">Nombre:</label>
+                    <input type="text" id="nombre-input" placeholder="Ej: Auriculares" required>
+                </div>
+                <div class="input-group">
+                    <label for="precio-input">Precio ($):</label>
+                    <input type="number" id="precio-input" placeholder="Ej: 35000" required min="1">
+                </div>
+                <button type="submit" id="btn-agregar">+ Agregar Producto</button>
+            </form>
+        </section>
+
+        <!-- Barra de búsqueda interactiva -->
+        <section class="search-section">
+            <input type="text" id="buscador-input" placeholder="🔍 Buscar producto en la lista...">
+        </section>
+
+        <!-- Contenedor donde se renderizará dinámicamente la lista -->
+        <section class="list-section">
+            <h2>Inventario Actual</h2>
+            <div id="contenedor-items">
+                <!-- Los productos se inyectarán aquí mediante JS -->
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
